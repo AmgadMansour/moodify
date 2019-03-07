@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cam.css') }}">
+
+
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <div id= "container">
+      <video autoplay="true" id="videoElement"> </video>
+      <button id="snap" onclick="snap()">Snap Photo</button>
+      <canvas id="canvas" width="320" height="240"></canvas>
+    </div>
+    <!-- if we put script in head browser begins loading external script files as it processes <head> tag. As soon as the file is loaded,-->
+        <!--the browser executes it, binding the click event to #user_button. This happens before it processes <body> -->
+    <!--tag, so #user_button isn't yet part of the DOM.-->
+    <script src="/static/js/cam.js" charset="utf-8"></script>
+
+    {% endblock %}
+  </body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Display Webcam Stream</title>-->
+  <!---->
+<!--<style>-->
+<!--#container {-->
+    <!--margin: 0px auto;-->
+    <!--width: 500px;-->
+    <!--height: 375px;-->
+    <!--border: 10px #333 solid;-->
+<!--}-->
+<!--#videoElement {-->
+    <!--width: 500px;-->
+    <!--height: 375px;-->
+    <!--background-color: #666;-->
+<!--}-->
+<!--</style>-->
+<!--</head>-->
+  <!---->
+<!--<body>-->
+<!--<div id="container">-->
+    <!--<video autoplay="true" id="videoElement"> </video>-->
+     <!--<canvas id="canvas" width="320" height="240"></canvas>-->
+  <!--<button id="snap" onclick="snap()">Snap Photo</button>-->
+
+<!--</div>-->
+
+
+<!--<script>-->
+ <!--var video = document.querySelector("#videoElement");-->
+ <!--var canvas=document.querySelector('canvas');-->
+  <!--var context=canvas.getContext('2d');-->
+
+
+<!--if (navigator.mediaDevices.getUserMedia) {-->
+    <!--navigator.mediaDevices.getUserMedia({video: true})-->
+  <!--.then(function(stream) {-->
+    <!--video.srcObject = stream;-->
+  <!--})-->
+  <!--.catch(function(err0r) {-->
+    <!--console.log("Something went wrong!");-->
+  <!--});-->
+<!--}-->
+
+<!--function snap() {-->
+    <!--context.fillRect(0,0,320,240);-->
+    <!--context.drawImage(video,0,0,320,240);-->
+  <!--}-->
+
+
+
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
