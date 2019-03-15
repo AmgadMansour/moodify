@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template,request,redirect,jsonify
+from mood import  main_func
+import base64
 #instance of flask class
 app = Flask(__name__)
 
@@ -12,6 +13,15 @@ def home():
 @app.route("/player")
 def player():
     return render_template("player.html")
+
+@app.route('/emotion')
+def emotion():
+  # Get img data
+
+  # Run script for emotion recognition
+  mood = main_func()
+
+  return jsonify(mood)
 
 if __name__ == "__main__":
     app.run(debug=True)
