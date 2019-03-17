@@ -13,8 +13,10 @@ def home():
 def player():
     return render_template("player.html")
 
+
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 #venv: virtual enviroment is to create a separate environment (python version, depndecies, packages) for this project
