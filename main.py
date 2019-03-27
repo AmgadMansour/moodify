@@ -1,5 +1,10 @@
-from flask import Flask, render_template
+import base64
 
+from flask import Flask, render_template,request,redirect,jsonify, json, make_response
+from PIL import Image
+
+# from mood import  main_func
+# import base64
 #instance of flask class
 app = Flask(__name__)
 
@@ -13,6 +18,36 @@ def home():
 def player():
     return render_template("player.html")
 
+@app.route("/test", methods=['POST', 'GET'])
+def test():
+	if request.method == 'POST':
+		req = request.json
+		s = req["img64"]
+		print(type(s))
+		#print(s)
+		# Take in base64 string and return byte arrary
+		imgdata = base64.b64decode(s)
+		print(type(imgdata)) #byte array
+		return render_template("test.html",variable=s)
+	# if request.method == 'GET':
+	# 	return render_template("test.html",variable=s)
+
+# @app.route('/player/<emotion>') #auto rendering in html player
+# def test(name):
+#         return render_template("test.html", variable = name)
+
+
+# <<<<<<< HEAD
+# =======
+# @app.route('/emotion')
+# def emotion():
+#   # Get img data
+#
+#   # Run script for emotion recognition
+#   mood = main_func()
+#
+#   return jsonify(mood)
+# >>>>>>> 60bd22a166feb39bd656513f0ffb448258350a53
 
 if __name__ == "__main__":
     app.run(debug=True)
