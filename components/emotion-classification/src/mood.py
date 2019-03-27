@@ -5,4 +5,5 @@ def main_func():
     image_path = '/Users/macbookair/desktop/MS/Project/images/face1.jpg';
 
     mood = getFaceEmotion(image_path)
+    print mood
     return mood
