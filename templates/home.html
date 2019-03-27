@@ -22,6 +22,17 @@
       <button id="snap" onclick="snap()">Snap Photo</button>
       <canvas id="canvas" width="320" height="240"></canvas>
     </div>
+
+    <button onclick="myFunction()">Try it</button>
+    <div id="mood">
+    <img src="../snap.jpg" alt="Captured mood">
+    <img src="../predicted_test_image.png" alt="Classified mood"></div>
+
+     <form class="buttons row" action="/music" method="post">
+        <button type="submit">
+          <i class="material-icons">Moodify</i>
+        </button>
+      </form>
     <!-- if we put script in head browser begins loading external script files as it processes <head> tag. As soon as the file is loaded,-->
         <!--the browser executes it, binding the click event to #user_button. This happens before it processes <body> -->
     <!--tag, so #user_button isn't yet part of the DOM.-->

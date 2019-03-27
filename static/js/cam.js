@@ -16,14 +16,14 @@ if (navigator.mediaDevices.getUserMedia) {
 }
 
 function snap() {
-    window.alert("snap called");
+    //window.alert("snap called");
     context.fillRect(0,0,320,240);
     context.drawImage(video,0,0,320,240);
     var image = canvas.toDataURL("image/png");  // base64-encoded image using canvas.toDataURL
     var arr = image.split(",",2); // remove metadata
     var img64 = arr[1];
     //tmp = "amgad";
-    window.alert("pre ajax");
+    //window.alert("pre ajax");
     $.ajax({
             contentType: 'application/json;charset=UTF-8',
             url: '/test',
@@ -33,12 +33,19 @@ function snap() {
                // alert(result);
             },
             error: function (result) {
-                alert("error!");
+                //alert("error!");
             }
         });   //end ajax
-    window.alert("post ajax");
+    //window.alert("post ajax");
     //window.location.href = '/test/'+image; // directly redirect to url with paramter given
   }
 
-
+function myFunction() {
+  var x = document.getElementById("mood");
+  if (x.style.display === "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 

@@ -15,8 +15,8 @@ from utils.preprocessor import preprocess_input
 def getFaceEmotion(image_path):
     # parameters for loading data and images
     #image_path = sys.argv[1]
-    # base = 'C://Users/lenovo/Desktop/moodify/components/emotion-classification'
-    base = '/Users/macbookair/desktop/MS/Project/components/emotion-classification';
+    base = 'C://Users/lenovo/Desktop/moodify/components/emotion-classification'
+    #base = '/Users/macbookair/desktop/MS/Project/components/emotion-classification';
     detection_model_path = base+'/trained_models/detection_models/haarcascade_frontalface_default.xml'
     emotion_model_path = base+'/trained_models/emotion_models/fer2013_mini_XCEPTION.102-0.66.hdf5'
     gender_model_path = base+'/trained_models/gender_models/simple_CNN.81-0.96.hdf5'
@@ -83,5 +83,5 @@ def getFaceEmotion(image_path):
     print(gender_text)
     print(emotion_text)
     bgr_image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
-    cv2.imwrite(base+'/images/predicted_test_image.png', bgr_image)
+    cv2.imwrite('predicted_test_image.png', bgr_image)
     return  emotion_text
