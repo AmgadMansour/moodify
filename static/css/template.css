@@ -1,9 +1,13 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Crafty Girls', sans-serif;
+  background-image: url("../data/img/home.jpg");
+  background-size: cover;
 }
 
 .logo {
-  background-color: #0D122B;
+  font-style:italic;
+  text-align: center;
   padding: 10px;
   color: white;
 }
+

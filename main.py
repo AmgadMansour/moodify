@@ -1,12 +1,8 @@
 import base64
 
 from flask import Flask, render_template,request,redirect,jsonify, json, make_response
-from PIL import Image
 from mood import main_func
 
-# from mood import  main_func
-# import base64
-#instance of flask class
 app = Flask(__name__)
 
 #default page (function home will get activated when going to home route "/")
@@ -38,13 +34,8 @@ def test():
 		f.write(imgdata)
 		f.close()
 		print(type(imgdata)) #byte array
-		return True
-	# if request.method == 'GET':
-	# 	return render_template("test.html",variable=s)
+		return "True"
 
-# @app.route('/player/<emotion>') #auto rendering in html player
-# def test(name):
-#         return render_template("test.html", variable = name)
 
 
 

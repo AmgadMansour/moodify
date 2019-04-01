@@ -40,12 +40,3 @@ function snap() {
     //window.location.href = '/test/'+image; // directly redirect to url with paramter given
   }
 
-function myFunction() {
-  var x = document.getElementById("mood");
-  if (x.style.display === "none") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-

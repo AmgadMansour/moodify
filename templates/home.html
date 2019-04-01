@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Flask Tutorial</title>
+    <title>Moodify</title>
+      <link href='https://fonts.googleapis.com/css?family=Crafty Girls' rel='stylesheet'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cam.css') }}">
 
 
@@ -20,17 +22,12 @@
     <div id= "container">
       <video autoplay="true" id="videoElement"> </video>
       <button id="snap" onclick="snap()">Snap Photo</button>
-      <canvas id="canvas" width="320" height="240"></canvas>
+      <canvas id="canvas" width="340" height="190"></canvas>
     </div>
-
-    <button onclick="myFunction()">Try it</button>
-    <div id="mood">
-    <img src="../snap.jpg" alt="Captured mood">
-    <img src="../predicted_test_image.png" alt="Classified mood"></div>
 
      <form class="buttons row" action="/music" method="post">
         <button type="submit">
-          <i class="material-icons">Moodify</i>
+          <i class="button">Music</i>
         </button>
       </form>
     <!-- if we put script in head browser begins loading external script files as it processes <head> tag. As soon as the file is loaded,-->
