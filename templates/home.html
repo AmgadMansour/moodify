@@ -13,23 +13,23 @@
     {% extends "template.html" %}
     {% block content %}
 
-    <!--var cars = [-->
-	<!--{ "make":"Porsche", "model":"911S" },-->
-	<!--{ "make":"Mercedes-Benz", "model":"220SE" },-->
-	<!--{ "make":"Jaguar","model": "Mark VII" }-->
-     <!--];-->
+
+
 
     <div id= "container">
       <video autoplay="true" id="videoElement"> </video>
       <button id="snap" onclick="snap()">Snap Photo</button>
       <canvas id="canvas" width="340" height="190"></canvas>
-    </div>
 
-     <form class="buttons row" action="/music" method="post">
-        <button type="submit">
-          <i class="button">Music</i>
+        <form class="buttons row" action="/music" method="post">
+        <button type="submit" id="play">
+          <i class="button">Songs</i>
         </button>
       </form>
+
+
+
+
     <!-- if we put script in head browser begins loading external script files as it processes <head> tag. As soon as the file is loaded,-->
         <!--the browser executes it, binding the click event to #user_button. This happens before it processes <body> -->
     <!--tag, so #user_button isn't yet part of the DOM.-->

@@ -15,7 +15,7 @@ from utils.preprocessor import preprocess_input
 def getFaceEmotion(image_path):
     # parameters for loading data and images
     #image_path = sys.argv[1]
-    base = 'C://Users/lenovo/Desktop/moodify/components/emotion-classification'
+    base = '/Users/macbookair/desktop/ms/project/components/emotion-classification'
     #base = '/Users/macbookair/desktop/MS/Project/components/emotion-classification';
     detection_model_path = base+'/trained_models/detection_models/haarcascade_frontalface_default.xml'
     emotion_model_path = base+'/trained_models/emotion_models/fer2013_mini_XCEPTION.102-0.66.hdf5'

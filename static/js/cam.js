@@ -2,8 +2,6 @@
   var canvas = document.getElementById('canvas');
   var context=canvas.getContext('2d');
 
-  var cars = "car A";
-
 
 if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({video: true})
@@ -39,4 +37,6 @@ function snap() {
     //window.alert("post ajax");
     //window.location.href = '/test/'+image; // directly redirect to url with paramter given
   }
+
+
 

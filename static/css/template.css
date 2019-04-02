@@ -1,13 +1,19 @@
-body {
-  font-family: 'Crafty Girls', sans-serif;
-  background-image: url("../data/img/home.jpg");
-  background-size: cover;
-}
+/*body {*/
+  /*font-family: 'Crafty Girls', sans-serif;*/
+  /*background-image: url("../data/img/home.jpg");*/
+  /*background-size: cover;*/
+/*}*/
 
 .logo {
   font-style:italic;
   text-align: center;
   padding: 10px;
   color: white;
+}
+
+body {
+  background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
+  background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%);
+  height: 100vh;
 }
 
