@@ -1,4 +1,4 @@
-# from image_emotion_gender_demo import  getFaceEmotion
+from image_emotion_gender_demo import  getFaceEmotion
 
 def main_func():
     image_path = 'snap.jpg'

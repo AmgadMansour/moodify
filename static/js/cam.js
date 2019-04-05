@@ -15,8 +15,8 @@ if (navigator.mediaDevices.getUserMedia) {
 
 function snap() {
     //window.alert("snap called");
-    context.fillRect(0,0,320,240);
-    context.drawImage(video,0,0,320,240);
+    context.fillRect(0,0,380,280);
+    context.drawImage(video,0,0,380,280);
     var image = canvas.toDataURL("image/png");  // base64-encoded image using canvas.toDataURL
     var arr = image.split(",",2); // remove metadata
     var img64 = arr[1];

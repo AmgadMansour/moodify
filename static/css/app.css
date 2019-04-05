@@ -6,12 +6,15 @@
 */
 
 
-
+#emheader{
+  padding-left: 120px;
+  padding-top: 400px;
+}
 
 
 
 div#amplitude-player {
-  background: #FFFFFF;
+  background: aquamarine;
   box-shadow: 0 2px 12px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
   margin-top: 20px;

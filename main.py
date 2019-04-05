@@ -1,7 +1,7 @@
 import base64
 
 from flask import Flask, render_template,request,redirect,jsonify, json, make_response
-from mood import main_func
+# from mood import main_func
 
 app = Flask(__name__)
 
@@ -18,8 +18,7 @@ def player():
 @app.route('/music', methods=['POST', 'GET'])
 def music():
    # mood = main_func()
-   mood = "sad";
-   # return redirect("/player?mood=" + emotion = mood)
+   mood = "happy";
    return render_template("player.html",emotion=mood)
 
 @app.route("/test", methods=['POST', 'GET'])
